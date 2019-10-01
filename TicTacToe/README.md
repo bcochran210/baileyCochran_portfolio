@@ -34,7 +34,7 @@ There are no actual constructors within this class. This classes function is onl
 ### Methods
 | **Returns** | **Method** |
 | :---        |    :----:   |
-| Void | `public static void main(String[] args)` |
+| Void | `main(String[] args)` |
 | | *Allows for the user to enter a string value at the end of the start command within the Command Prompt / Terminal. The string that is entered, as long as it an integer greater than 0, is then converted to an Integer value and stored in the "width" variable. If no number is entered, then the Default_Width, which is 3, is used instead. Then the TicTacToeController class is called with the value of "width".* |
 
 ## Class: TicTacToeController
@@ -94,3 +94,28 @@ This is a user definied class that is in charge of creating the GUI for the prog
 | | *Returns the contents of the JButton[][] squares object.* |
 
 ## Class: TicTacToeModel
+
+This is a user defined class that is responsible for all the data within the game. This class will check for player's turn, the size of the board, the availability of a space, the storing of a symbol, and the end result.
+
+### Constructor(s)
+
+`public TicTacToeModel()`
+
+*Creates a new TicTacToeModel object using the default width of 3.*
+
+`public TicTacToeModel(int width)`
+
+*Creates a new TicTacToeModel that uses a user defined width to create the board.*
+
+### Attribute(s)
+
+| **Attribute** | **Description** |
+| :---        |    :----:   |
+| `private static final int DEFAULT_WIDTH` | An integer that stores the default game board width (3) and can not be altered by the program itself. |
+| `private Mark[][] board` | Stores the different symbols, or "marks". | 
+| `private boolean xTurn` | A true or false value that determines the player turn. If xTurn is true, then it is player X's turn, else it is player O's turn. |
+| `private int width` | Stores the player defined width. |
+
+### Methods
+| **Returns** | **Method** |
+| :---        |    :----:   |
