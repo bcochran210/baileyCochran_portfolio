@@ -66,3 +66,31 @@ This is a user defined class that brings the data of the TicTacToeModel class an
 | | *Loops through all of the squares and checks for user input. If a user has inputted something within the specified square, it will set the text of the button that belongs to that square to that of the symbol (X or O) of the player who clicked it.* | 
 
 ## Class: TicTacToeView
+
+This is a user definied class that is in charge of creating the GUI for the program. 
+
+### Constructor(s)
+
+`public TicTacToeView(int width, TicTacToeController controller)`
+
+*Creates a new TicTacToeView object that passes the width and calls information from the TicTacToeController class to allow use of the action listener*
+
+### Attribute(s)
+
+| **Attribute** | **Description** |
+| :---        |    :----:   |
+| `TicTacToeController controller` | Initializes the TicTacToeController class for use within the TicTacToeView class |
+| `private JButton[][] squares` | A JButton that represents the squares of a TicTacToe board. The button, when clicked, will store the value of the player's symbol. |
+| `private JLabel resultLabel` | A JLabel that displays the outcome of the game. |
+| `private JPanel squaresPanel` | A JPanel that stores the `squares` JButtons. |
+| `private int width` | An integer that stores the width that has been passed from the TicTacToeController class. |
+
+### Methods
+| **Returns** | **Method** |
+| :---        |    :----:   |
+| Void | `showResult(string r)` |
+| | *Sets the JLabel to the result of the game through a provided string, r, and displays that in the JLabel.* | 
+| JButton | `returnSquares()` | 
+| | *Returns the contents of the JButton[][] squares object.* |
+
+## Class: TicTacToeModel
