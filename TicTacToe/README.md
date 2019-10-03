@@ -115,7 +115,29 @@ This is a user defined class that is responsible for all the data within the gam
 | `private Mark[][] board` | Stores the different symbols, or "marks". | 
 | `private boolean xTurn` | A true or false value that determines the player turn. If xTurn is true, then it is player X's turn, else it is player O's turn. |
 | `private int width` | Stores the player defined width. |
+| `enum Result` | Stores the result for the game. |
+| `enum Mark` | Stores the possible marks, or symbols, that can fill a square; X, O, and an empty space. |
 
 ### Methods
 | **Returns** | **Method** |
 | :---        |    :----:   |
+| Boolean | `makeMark(int row, int col)` |
+| | *Places the current player's symbol in the square a the specified location, but only if the location is available. If true, the mark is stored in the specified location.* |
+| Boolean | `isValidSquare(int row, int col)` |
+| | *Checks to see if the current square is within the board. If so, returns true.* |
+| Boolean |  `isSquareMarked(int row, int col)` |
+| | *Checks to see if the selected square is already occupied by a symbol/mark. If so, returns true.* |
+| Enumerator | `getMark(int row, int col)` | 
+| | *Returns the mark from the square at the specified location.* |
+| Enumerator | `getResult()` |
+| | *Returns the results as to who won the game.* |
+| Boolean | `isMarkWin(Mark mark)` |
+| | *Checks to see if the specified mark has won using any of the following conditions: all marks in a vertical row, horizontal row, or diagonal. If they match any of those winning conditions, returns true.* |
+| Boolean | `isTie()` |
+| | *Checks to see if all of the squares are full and are void of any winning conditions. If so, returns true, ending the game in a tie.* |
+| Boolean | `isGameover()` |
+| | `Returns true if the game is over, ending the game.` |
+| Boolean | `isXturn()` |
+| | *Returns the value os xTurn.* |
+| Integer | `getWidth()` | 
+| | *Returns the width of the game board.* |
