@@ -1,7 +1,11 @@
 # DieRoller
 # Project Summary
 
-The following application, upon running, rolls 5 die each with a different amount of faces. The different faces consist of 4, 6, 8, 10, 12, 20, 100. After each die is rolled, the application will also display the number the die actually landed. 
+The following application, upon running, rolls 5 die each with a different number of faces. The different face values consist of 4, 6, 8, 10, 12, 20, and 100. The program will first assign each of the die a face value. Then, the program will "roll" each die, randomly selecting a value between one and the total face value. Once these numbers have been determined, the program will then display the information to the user in the following format:
+
+"d6 = 4",
+
+this output means that a six sided die was rolled, and it landed on four. This will be repeated for the other four die. 
 
 # Running the Program
 
@@ -21,7 +25,7 @@ This is a user defined class that is in charge of randomly selecting a face valu
 
 ### Constructor(s)
 
-There are no constructors in this class.
+There are no constructors in this class. The main purpose of this class is to intiate the five die that will be rolled, and assign each die a face value. Then, this information is handed off to the "Die" class. This class is also responsible for the output of the rolls.
 
 ### Attribute(s)
 
@@ -43,7 +47,7 @@ There are no constructors in this class.
 
 ## Class: Die
 
-A user defined class that assigns the face value to the die, rolls and recieves a result, and then formats the result in the "d# = #" format.
+A user defined class that assigns the face value to the die, rolls and recieves a result, and then formats the result in the "d# = #" format. The information is then handed back to the "Main" class to be displayed to the user.
 
 ### Constructor(s)
 
